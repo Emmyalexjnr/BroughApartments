@@ -15,7 +15,7 @@ import androidx.compose.ui.unit.sp
 fun Dashboard() {
     Box(modifier = Modifier.fillMaxSize()) {
         Column(modifier = Modifier.fillMaxSize().align(Alignment.Center),
-            verticalArrangement = Arrangement.Center,
+            verticalArrangement = Arrangement.Top,
             horizontalAlignment = Alignment.CenterHorizontally) {
             Text(text = "Dashboard", fontSize = 30.sp)
         }

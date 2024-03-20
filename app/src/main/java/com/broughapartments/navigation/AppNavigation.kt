@@ -63,10 +63,7 @@ fun AppNavigation(){
             }
         },
     ) { paddingValues ->
-        Text(
-            modifier = Modifier.padding(paddingValues),
-            text = "Example of a scaffold with a bottom app."
-        )
+
         NavHost(
             navController = navController,
             startDestination = Screens.ExploreScreen.name,
