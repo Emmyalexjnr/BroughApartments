@@ -40,7 +40,7 @@ fun LocationInfo() {
         ) {
             Icon(modifier = Modifier.size(18.dp),
                 imageVector = Icons.Filled.LocationOn, contentDescription = "Property location")
-            Text(text = "TS1", fontSize = 12.sp)
+            MyText(text = "TS1", fontSize = 12.sp)
         }
     }
 }
@@ -56,7 +56,7 @@ fun RentOrSaleInfo() {
             .padding(12.dp)
 
         ) {
-            Text(text = "For Sale", fontSize = 12.sp)
+            MyText(text = "For Sale", fontSize = 12.sp)
         }
         Column(
             modifier = Modifier
@@ -65,7 +65,7 @@ fun RentOrSaleInfo() {
                 .padding(11.dp)
 
         ) {
-            Text(text = "For Sale", fontSize = 12.sp)
+            MyText(text = "For Sale", fontSize = 12.sp)
         }
     }
 }
@@ -79,7 +79,7 @@ fun PriceInfo() {
             modifier = Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically) {
-            Text(text = "N7,000", fontSize = 22.sp, fontWeight = FontWeight.Bold)
+            MyText(text = "N7,000", fontSize = 22.sp, fontWeight = FontWeight.Bold)
             RentOrSaleInfo()
         }
     }
@@ -88,8 +88,11 @@ fun PriceInfo() {
 @Composable
 fun ItemInfo(text: String) {
     Row(modifier = Modifier
-        .background(color = colorResource(id = R.color.light_grey_200), shape = RoundedCornerShape(5.dp))
-        .padding(10.dp, 5.dp, 10.dp, 5.dp )) {
-        Text(text = text)
+        .background(
+            color = colorResource(id = R.color.light_grey_200),
+            shape = RoundedCornerShape(5.dp)
+        )
+        .padding(10.dp, 5.dp, 10.dp, 5.dp)) {
+        MyText(text = text)
     }
 }

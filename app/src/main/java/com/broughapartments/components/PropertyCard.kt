@@ -95,7 +95,7 @@ fun PropertyCard() {
                     .fillMaxWidth()
                     .padding(15.dp)) {
                     Row {
-                        Text(
+                        MyText(
                             text = "Fully furnished 3 bedroom duplex\n" +
                                 "in Utako Estate.",
                             fontWeight = FontWeight.Bold

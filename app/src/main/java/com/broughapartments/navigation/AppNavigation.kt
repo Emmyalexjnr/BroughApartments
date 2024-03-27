@@ -12,6 +12,8 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.navigation.NavDestination.Companion.hierarchy
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
@@ -19,6 +21,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
+import com.broughapartments.components.MyText
 import com.broughapartments.ui.dashboard.Dashboard
 import com.broughapartments.ui.explore.Explore
 import com.broughapartments.ui.profile.Profile
@@ -38,7 +41,7 @@ fun AppNavigation(){
                 listOfNavItems.forEachIndexed { index, item ->
                     NavigationBarItem(
 
-                        label = { Text(item.title) },
+                        label = { MyText(text = item.title, fontSize = 13.sp) },
                         selected = currentDestination?.hierarchy?.any{ it.route == item.route } == true,
                         icon = {
                             Icon(imageVector = if(selectedItem == index) {

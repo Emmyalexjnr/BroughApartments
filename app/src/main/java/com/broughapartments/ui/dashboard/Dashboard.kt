@@ -14,10 +14,12 @@ import androidx.compose.ui.unit.sp
 @Composable
 fun Dashboard() {
     Box(modifier = Modifier.fillMaxSize()) {
-        Column(modifier = Modifier.fillMaxSize().align(Alignment.Center),
+        Column(modifier = Modifier
+            .fillMaxSize()
+            .align(Alignment.Center),
             verticalArrangement = Arrangement.Top,
             horizontalAlignment = Alignment.CenterHorizontally) {
-            Text(text = "Dashboard", fontSize = 30.sp)
+            Login()
         }
     }
 }
